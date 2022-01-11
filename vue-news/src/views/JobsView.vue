@@ -10,8 +10,7 @@ import ListItem from "../components/ListItem";
 export default {
   components: {
     ListItem
-  }
-
+  },
   // computed: {
   //   // #1
   //   ...mapState(['jobs'])
@@ -29,9 +28,9 @@ export default {
   //     jobs: state => state.jobs
   //   })
   // },
-  // created() {
-  //   this.$store.dispatch("FETCH_JOBS")
-  // }
+  created() {
+    this.$store.dispatch("FETCH_JOBS")
+  }
 }
 </script>
 

@@ -53,16 +53,6 @@ export default {
       }
       return null;
     }
-  },
-  created() {
-    const name = this.$route.name;
-    let actionName = "FETCH_NEWS";
-    if(name === 'ask') {
-      actionName = "FETCH_ASK";
-    }else if(name === 'jobs') {
-      actionName = "FETCH_JOBS";
-    }
-    this.$store.dispatch(actionName);
   }
 }
 </script>
