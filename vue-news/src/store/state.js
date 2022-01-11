@@ -4,5 +4,6 @@ export default {
     jobs: [],
     user: {},
     itemInfo: {},
-    items: []
+    items: [],
+    list: []
 }
