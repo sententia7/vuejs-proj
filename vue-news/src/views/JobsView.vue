@@ -29,7 +29,7 @@ export default {
   //     jobs: state => state.jobs
   //   })
   // },
-  mixins: [ListMixin]
+  mixins: [ListMixin],
 }
 </script>
 
