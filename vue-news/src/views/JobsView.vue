@@ -6,6 +6,7 @@
 
 <script>
 import ListItem from "../components/ListItem";
+import ListMixin from "../mixins/ListMixin";
 
 export default {
   components: {
@@ -28,9 +29,7 @@ export default {
   //     jobs: state => state.jobs
   //   })
   // },
-  created() {
-    this.$store.dispatch("FETCH_JOBS")
-  }
+  mixins: [ListMixin]
 }
 </script>
 
