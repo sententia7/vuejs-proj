@@ -34,31 +34,31 @@ export default {
             console.log(e);
         }
     },
-    FETCH_USER({commit}, name) {
-        return fetchUserInfo(name)
-            .then(({data}) => {
-                commit("SET_USER", data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+    async FETCH_USER({commit}, name) {
+        try{
+            const response = await fetchUserInfo(name);
+            commit('SET_USER', response.data);
+            return response;
+        }catch (e) {
+            console.log(e);
+        }
     },
-    FETCH_ITEMINFO({commit}, itemId) {
-        return fetchItem(itemId)
-            .then(({data}) => {
-                commit("SET_ITEM", data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+    async FETCH_ITEMINFO({commit}, itemId) {
+        try{
+            const response = await fetchItem(itemId);
+            commit('SET_ITEM', response.data);
+            return response;
+        }catch (e) {
+            console.log(e);
+        }
     },
-    FETCH_LIST({commit}, pageName){
-        return fetchList(pageName)
-            .then(({data}) => {
-                commit("SET_LIST", data);
-            })
-            .catch(error => {
-               console.log(error);
-            });
+    async FETCH_LIST({commit}, pageName){
+        try{
+            const response = await fetchList(pageName);
+            commit('SET_LIST', response.data);
+            return response;
+        }catch (e) {
+            console.log(e);
+        }
     }
 }
