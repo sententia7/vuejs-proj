@@ -7,32 +7,32 @@ import {
 } from "../api";
 
 export default {
-    FETCH_NEWS({commit}) {
-        return fetchNewList()
-            .then(({data}) => {
-                commit("SET_NEWS", data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+    async FETCH_NEWS({commit}) {
+        try {
+           const response = await fetchNewsList();
+           commit('SET_NEWS', response.data);
+           return response;
+        }catch (e) {
+            console.log(e);
+        }
     },
-    FETCH_ASK({commit}) {
-        return fetchAskList()
-            .then(({data}) => {
-                commit("SET_ASK", data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+    async FETCH_ASK({commit}) {
+        try{
+            const response = await fetchAskList();
+            commit('SET_ASK', response.data);
+            return response;
+        }catch (e) {
+            console.log(e);
+        }
     },
-    FETCH_JOBS({commit}) {
-        return fetchJobsList()
-            .then(({data}) => {
-                commit("SET_JOBS", data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+    async FETCH_JOBS({commit}) {
+        try{
+            const response = await fetchJobsList();
+            commit('SET_JOBS', response.data);
+            return response;
+        }catch (e) {
+            console.log(e);
+        }
     },
     FETCH_USER({commit}, name) {
         return fetchUserInfo(name)

@@ -6,7 +6,7 @@ export default {
         bus.$emit('end:spinner');
     },
 
-    // routes에서 before함수로 처리했기때문에 주석처리
+    // routes에서 beforeEnter함수로 처리했기때문에 주석처리
     // 컴포넌트 재활용 mixin
     // created() {
     //     bus.$emit('start:spinner');

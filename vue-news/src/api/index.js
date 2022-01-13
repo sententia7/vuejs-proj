@@ -4,7 +4,7 @@ const config = {
     baseUrl : 'https://api.hnpwa.com/v0/'
 };
 
-function fetchNewList() {
+function fetchNewsList() {
     return axios.get(`${config.baseUrl}news/1.json`);
 }
 
@@ -29,7 +29,7 @@ function fetchItem(item) {
 }
 
 export {
-    fetchNewList,
+    fetchNewsList,
     fetchAskList,
     fetchJobsList,
     fetchUserInfo,
