@@ -5,6 +5,7 @@ import AskView from '../views/AskView';
 import JobsView from '../views/JobsView';
 import ItemView from '../views/ItemView';
 import UserView from '../views/UserView';
+import LoginView from "../views/LoginView";
 import bus from "../utils/bus";
 import { store } from "../store/index";
 
@@ -62,6 +63,6 @@ export const router = new VueRouter({
         {
             path: '/item/:id',
             component: ItemView
-        }
+        },
     ]
 });
